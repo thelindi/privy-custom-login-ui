@@ -248,7 +248,7 @@ export function LoginPage({ config: userConfig }: LoginPageProps = {}) {
   if (!ready) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4" style={backgroundStyle}>
-        {config.backgroundImage && <div className={`absolute inset-0 bg-black/${overlayOpacity}`} />}
+        {config.backgroundImage && <div className="absolute inset-0" style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity / 100})` }} />}
         <div className="relative flex items-center justify-center gap-2 py-4">
           <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
           <span className="text-muted-foreground">Loading...</span>
@@ -260,7 +260,7 @@ export function LoginPage({ config: userConfig }: LoginPageProps = {}) {
   if (showSmsVerification) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4" style={backgroundStyle}>
-        {config.backgroundImage && <div className={`absolute inset-0 bg-black/${overlayOpacity}`} />}
+        {config.backgroundImage && <div className="absolute inset-0" style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity / 100})` }} />}
         <div className="relative w-full max-w-md">
           <div className="bg-card/95 backdrop-blur-md border border-border rounded-lg p-6 space-y-6 shadow-xl">
             <div className="space-y-2">
@@ -297,7 +297,7 @@ export function LoginPage({ config: userConfig }: LoginPageProps = {}) {
   if (showEmailVerification) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4" style={backgroundStyle}>
-        {config.backgroundImage && <div className={`absolute inset-0 bg-black/${overlayOpacity}`} />}
+        {config.backgroundImage && <div className="absolute inset-0" style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity / 100})` }} />}
         <div className="relative w-full max-w-md">
           <div className="bg-card/95 backdrop-blur-md border border-border rounded-lg p-6 space-y-6 shadow-xl">
             <div className="space-y-2">
@@ -333,7 +333,7 @@ export function LoginPage({ config: userConfig }: LoginPageProps = {}) {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4" style={backgroundStyle}>
-      {config.backgroundImage && <div className={`absolute inset-0 bg-black/${overlayOpacity}`} />}
+      {config.backgroundImage && <div className="absolute inset-0" style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity / 100})` }} />}
       <div className="relative w-full max-w-md landscape:max-w-4xl">
         <div className="bg-card/95 backdrop-blur-md border border-border/30 rounded-lg shadow-2xl overflow-hidden">
           <div className="landscape:hidden">

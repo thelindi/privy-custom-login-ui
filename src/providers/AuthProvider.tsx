@@ -23,7 +23,7 @@ export function AuthProvider({ children, config }: AuthProviderProps) {
         loginMethods: config.loginMethods || ['email', 'google', 'sms', 'apple', 'passkey'],
         appearance: {
           theme: config.appearance?.theme || 'dark',
-          accentColor: config.appearance?.accentColor || '#22c55e',
+          accentColor: (config.appearance?.accentColor || '#22c55e') as `#${string}`,
           logo: config.appearance?.logo,
         },
         embeddedWallets: {
